@@ -1,0 +1,15 @@
+const player = require('../../pleyer')
+const comma = require('comma-number')
+const { getYouTubeThumbnail } = require("yt-vimeo-thumbnail/dist/youtube/getYouTube");
+player.on("trackStart", (queue, track) => {
+    let playl = new (require('discord.js')).MessageEmbed()
+        .setColor("BLUE")
+        .setTitle("🎶 노래를 재생합니다! 🎶")
+        .setURL(`${track.url}`)
+        .setDescription(`<a:o_:988403926288199731>` + `\`${track.title}\`` + `(이)가 지금 재생되고 있습니다!`)
+        .addField("길이", `${track.duration}`, true)
+        .addField("조회수", `${comma(track.views)}`, true)
+        .addField("게시자", `${track.author}`, true)
+        .setThumbnail(getYouTubeThumbnail(`${track.url}`))
+    queue.metadata.send({ embeds: [playl] })
+})

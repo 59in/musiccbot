@@ -1,0 +1,32 @@
+{
+  "name": "mora_music",
+  "version": "1.0.0",
+  "description": "모라봇 공식 뮤직 봇 입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm i",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MORA-Team/Mora_Music.git"
+  },
+  "author": "939349343431954462",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MORA-Team/Mora_Music/issues"
+  },
+  "homepage": "https://github.com/MORA-Team/Mora_Music#readme",
+  "dependencies": {
+    "@discordjs/rest": "^0.5.0",
+    "comma-number": "^2.1.0",
+    "discord-player": "^5.2.2",
+    "discord.js": "^13.8.0",
+    "ffmpeg-static": "^4.4.1",
+    "mongoose": "^6.4.0",
+    "opusscript": "^0.0.8",
+    "yt-search": "^2.10.3",
+    "yt-vimeo-thumbnail": "^1.3.0"
+  }
+}
